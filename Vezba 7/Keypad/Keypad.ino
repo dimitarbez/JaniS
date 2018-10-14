@@ -25,29 +25,94 @@ pinMode(speakerPin, OUTPUT); // sets the speakerPin to be an output
 
 }
 
-void loop(){
+void loop()
+{
 char key = keypad.getKey();
 
 if (key != NO_KEY){
 Serial.println(key);
 
-if (key=='a'){ beep(speakerPin,2093,100);}
-if (key=='b'){ beep(speakerPin,2349,100);}
-if (key=='c'){ beep(speakerPin,2637,100);}
-if (key=='d'){ beep(speakerPin,2793,100);}
-if (key=='e'){ beep(speakerPin,3136,100);}
-if (key=='f'){ beep(speakerPin,3520,100);}
-if (key=='g'){ beep(speakerPin,3951,100);}
-if (key=='h'){ beep(speakerPin,4186,100);}
-if (key=='i'){ beep(speakerPin,8965,100);}
-if (key=='j'){ beep(speakerPin,7569,100);}
-if (key=='k'){ beep(speakerPin,6969,100);}
-if (key=='l'){ beep(speakerPin,4563,100);}
-if (key=='m'){ beep(speakerPin,3899,100);}
-if (key=='n'){ beep(speakerPin,9999,100);}
-if (key=='o'){ beep(speakerPin,6865,100);}
-if (key=='p'){ beep(speakerPin,9696,100);}
+if (key=='a')
+{
+  beep(speakerPin,2093,100);
+  
 }
+
+if (key=='b')
+{ 
+  beep(speakerPin,2349,100);
+}
+
+if (key=='c')
+{
+  beep(speakerPin,2637,100);
+}
+
+if (key=='d')
+{ 
+  beep(speakerPin,2793,100);
+}
+
+if (key=='e')
+{ 
+  beep(speakerPin,3136,100);
+}
+
+if (key=='f')
+{
+beep(speakerPin,3520,100);
+}
+
+if (key=='g')
+{ 
+  beep(speakerPin,3951,100);
+}
+
+if (key=='h')
+{
+  beep(speakerPin,4186,100);
+}
+
+if (key=='i')
+{ 
+  beep(speakerPin,8965,100);
+}
+
+if (key=='j')
+{
+  beep(speakerPin,7569,100);
+}
+
+if (key=='k')
+{ 
+  beep(speakerPin,6969,100);
+}
+
+if (key=='l')
+{ 
+  beep(speakerPin,4563,100);
+}
+
+if (key=='m')
+{
+  beep(speakerPin,3899,100);
+}
+
+if (key=='n')
+{
+  beep(speakerPin,9999,100);
+}
+
+if (key=='o')
+{ 
+beep(speakerPin,6865,100);
+}
+
+if (key=='p')
+{
+  beep(speakerPin,9696,100);
+}
+  }
 }
 
 void beep (unsigned char speakerPin, int frequencyInHertz, long timeInMilliseconds){ // the sound producing function

@@ -17,17 +17,30 @@ void setup()
    pinMode(blue,OUTPUT);
 }
 
-void loop(){ 
+void loop()
+{ 
    
- myServo.write(45);
- digitalWrite(red,HIGH);
- delay(1000);
- 
- myServo.write(90);
- digitalWrite(green,HIGH);  
- delay(1000); 
 
- myServo.write(180);
- digitalWrite(blue,HIGH); 
- delay(1000); 
+myServo.write(10);
+delay (5000);
+
+
+digitalWrite(green, HIGH);
+delay(1000);
+digitalWrite(green, LOW);
+delay(1000);
+digitalWrite(blue, HIGH);
+delay(1000);
+digitalWrite(blue, LOW);
+delay(1000);
+digitalWrite(red, HIGH);
+delay(1000);
+digitalWrite(red, LOW);
+delay(1000);
+digitalWrite(green, HIGH);
+
+myServo.write(100);
+delay(5000);
+digitalWrite(red, LOW);
+ 
 }

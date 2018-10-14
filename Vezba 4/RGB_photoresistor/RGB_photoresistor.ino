@@ -2,11 +2,11 @@ int lightPin = A0;
 int red = 11;
 int green = 12;
 int blue = 13;
-int val;
+
 
 void setup() {
  
-  pinMode(lightPin, INPUT);
+  pinMode(lightPin, OUTPUT);
   pinMode(red, OUTPUT);
   pinMode(green, OUTPUT);
   pinMode(blue, OUTPUT);
@@ -15,8 +15,7 @@ void setup() {
 
 void loop() 
 {
-  val = analogRead(lightPin);
-  if (val >=300)
+  if (lightPin >=150)
   {
 
   digitalWrite(red,HIGH);  
@@ -25,7 +24,7 @@ void loop()
    
 else
 
-    if(val >=600)
+    if(lightPin >=1250)
     {
     
     digitalWrite(green,HIGH);
@@ -33,7 +32,7 @@ else
 
 else
 
-   if(val>=900)
+   if(lightPin>=2500)
    {
    digitalWrite(blue,HIGH); 
    }
