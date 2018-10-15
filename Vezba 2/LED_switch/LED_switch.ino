@@ -11,6 +11,5 @@ void loop() {
 	  digitalWrite(LED, HIGH);
 	  
   }
-  else
-	  digitalWrite(LED, LOW);
+ 
 }
