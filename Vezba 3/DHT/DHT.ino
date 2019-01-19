@@ -8,7 +8,7 @@
 
 //initialize lcd pins
 
-DHT dht(DHTPin, DHTTYPE);
+DHT DHT(DHTPin, DHTTYPE);
 #define I2C_ADDR 0x3F
 #define BACKLIGHT_PIN 3
 #define En_pin  2
@@ -28,13 +28,13 @@ float temp;
 float humi;
 void setup()
 {
-  dht.begin();  
+  DHT.begin();  
   lcd . begin (16,2);                      //initializes the LCD and specifies the dimensions
   lcd.setBacklightPin(BACKLIGHT_PIN,POSITIVE);
   lcd.setBacklight(HIGH);
 }
 void loop() {
-  temp = dht.readTemperature();
+  temp = DHT.readTemperature();
 
   lcd.setCursor(0,0);
   lcd.print("Temp: ");
